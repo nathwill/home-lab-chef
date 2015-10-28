@@ -1,0 +1,242 @@
+{
+  "revision_id": "c9cfaf949c5c7e5189fc82d53c7558d1263c79a095b9c799f20414b51c2b4c9f",
+  "name": "home-lab",
+  "run_list": [
+    "recipe[home-lab::default]"
+  ],
+  "cookbook_locks": {
+    "home-lab": {
+      "version": "0.1.0",
+      "identifier": "8d745053f81706c1db85dddb3867dcc17cc8a802",
+      "dotted_decimal_identifier": "39815860071175942.54566038504421479.242723580323842",
+      "source": "site-cookbooks/home-lab",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": null,
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "site-cookbooks/home-lab"
+      }
+    },
+    "systemd": {
+      "version": "1.0.0",
+      "identifier": "67ac63ef53027a1f8adb6718faa32c13cfc4ad22",
+      "dotted_decimal_identifier": "29181467818132090.8878399210191523.48463601773858",
+      "cache_key": "systemd-1.0.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/systemd/versions/1.0.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/systemd/versions/1.0.0/download",
+        "version": "1.0.0"
+      }
+    },
+    "ntp": {
+      "version": "1.8.6",
+      "identifier": "ecf1437a02492ded49f5f000e0790fa469d39fbf",
+      "dotted_decimal_identifier": "66693366615787821.66790890122829945.17198824529855",
+      "cache_key": "ntp-1.8.6-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/ntp/versions/1.8.6/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/ntp/versions/1.8.6/download",
+        "version": "1.8.6"
+      }
+    },
+    "sudo": {
+      "version": "2.7.2",
+      "identifier": "2acc2abc453ce5b49b364f78bd2c7112f592afc0",
+      "dotted_decimal_identifier": "12046432941194469.50836153371770156.124326243381184",
+      "cache_key": "sudo-2.7.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/sudo/versions/2.7.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/sudo/versions/2.7.2/download",
+        "version": "2.7.2"
+      }
+    },
+    "postfix": {
+      "version": "3.7.0",
+      "identifier": "2669f92ef8a313ab918896ed2f558f628e7aecc7",
+      "dotted_decimal_identifier": "10812568070824723.48292236851228501.157653459987655",
+      "cache_key": "postfix-3.7.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/postfix/versions/3.7.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/postfix/versions/3.7.0/download",
+        "version": "3.7.0"
+      }
+    },
+    "openssh": {
+      "version": "1.5.2",
+      "identifier": "dccc0bf6cce11d40ad5adf881c3e047fcf5d82c7",
+      "dotted_decimal_identifier": "62148846633672989.18205004318383166.4946986369735",
+      "cache_key": "openssh-1.5.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/openssh/versions/1.5.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/openssh/versions/1.5.2/download",
+        "version": "1.5.2"
+      }
+    },
+    "firewall": {
+      "version": "2.1.0",
+      "identifier": "70b57c62cf10b65fd175788906eed3524f6022a5",
+      "dotted_decimal_identifier": "31724743229903030.26970425251137262.232350472479397",
+      "cache_key": "firewall-2.1.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/firewall/versions/2.1.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/firewall/versions/2.1.0/download",
+        "version": "2.1.0"
+      }
+    },
+    "iptables": {
+      "version": "2.0.0",
+      "identifier": "79b41eabd4ec3f567b9445de9519bd9e520256b0",
+      "dotted_decimal_identifier": "34256516006865983.24342724754707737.208487678367408",
+      "cache_key": "iptables-2.0.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/iptables/versions/2.0.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/iptables/versions/2.0.0/download",
+        "version": "2.0.0"
+      }
+    },
+    "compat_resource": {
+      "version": "12.5.10",
+      "identifier": "82d1c74d38dbf72b1fe0728a9b08e9f54f58c602",
+      "dotted_decimal_identifier": "36822400896654327.12138472853379848.257239807477250",
+      "cache_key": "compat_resource-12.5.10-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/compat_resource/versions/12.5.10/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/compat_resource/versions/12.5.10/download",
+        "version": "12.5.10"
+      }
+    },
+    "chef-sugar": {
+      "version": "3.1.1",
+      "identifier": "bb2138b915a32f721c3b531250dfe2572185dc5e",
+      "dotted_decimal_identifier": "52672348151980847.32119188467372255.248863852452958",
+      "cache_key": "chef-sugar-3.1.1-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-sugar/versions/3.1.1/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-sugar/versions/3.1.1/download",
+        "version": "3.1.1"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "home-lab",
+        ">= 0.0.0"
+      ],
+      [
+        "systemd",
+        "= 1.0.0"
+      ],
+      [
+        "ntp",
+        "= 1.8.6"
+      ],
+      [
+        "sudo",
+        "= 2.7.2"
+      ],
+      [
+        "postfix",
+        "= 3.7.0"
+      ],
+      [
+        "openssh",
+        "= 1.5.2"
+      ],
+      [
+        "firewall",
+        "= 2.1.0"
+      ],
+      [
+        "iptables",
+        "= 2.0.0"
+      ],
+      [
+        "compat_resource",
+        "= 12.5.10"
+      ],
+      [
+        "chef-sugar",
+        "= 3.1.1"
+      ]
+    ],
+    "dependencies": {
+      "home-lab (0.1.0)": [
+        [
+          "systemd",
+          "~> 1.0"
+        ],
+        [
+          "ntp",
+          "~> 1.8"
+        ],
+        [
+          "sudo",
+          "~> 2.7"
+        ],
+        [
+          "postfix",
+          "~> 3.7"
+        ],
+        [
+          "openssh",
+          "~> 1.5"
+        ],
+        [
+          "firewall",
+          "~> 2.1"
+        ]
+      ],
+      "systemd (1.0.0)": [
+
+      ],
+      "ntp (1.8.6)": [
+
+      ],
+      "sudo (2.7.2)": [
+
+      ],
+      "postfix (3.7.0)": [
+
+      ],
+      "openssh (1.5.2)": [
+        [
+          "iptables",
+          ">= 0.0.0"
+        ]
+      ],
+      "firewall (2.1.0)": [
+        [
+          "chef-sugar",
+          ">= 0.0.0"
+        ]
+      ],
+      "iptables (2.0.0)": [
+        [
+          "compat_resource",
+          ">= 0.0.0"
+        ]
+      ],
+      "compat_resource (12.5.10)": [
+
+      ],
+      "chef-sugar (3.1.1)": [
+
+      ]
+    }
+  }
+}
