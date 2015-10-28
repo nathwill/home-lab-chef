@@ -1,0 +1,21 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos-7.1
+
+suites:
+  - name: default
+    run_list:
+      - recipe[home-lab::default]
+    attributes:
+      authorization:
+        sudo:
+          users:
+          - vagrant
+      ifcfg:
+        default_if: eth0

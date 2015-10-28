@@ -28,7 +28,17 @@
 end
 
 # add missing essentials
-package %w( psmisc lsof net-tools procps yum-utils iptables iptables-services )
+package %w(
+  bridge-utils iproute psmisc lsof net-tools
+  procps yum-utils iptables iptables-services
+)
+
+# Enable default rule-sets
+%w( iptables ip6tables ).each do |fw|
+  service fw do
+    action [:enable, :start]
+  end
+end
 
 # set up epel
 package 'epel-release'
@@ -43,13 +53,44 @@ end
 end
 
 # set up the network
-node['ifcfg'].each_pair do |iface, config|
-  file "/etc/sysconfig/network-scripts/ifcfg-#{iface}" do
-    content config.map { |conf, val| "#{conf.upcase}=\"#{val}\"" }
-    notifies :restart, 'service[network]', :delayed
-  end
+network_interface 'br0' do
+  type 'Bridge'
+  bootproto 'none'
+  address node['ipaddress']
+  netmask '255.255.255.0'
+  gateway node['default_gateway']
+  dns %w( 8.8.8.8 8.8.4.4 )
+  ipv6init true
+  reload_type :delayed
 end
 
-service 'network' do
-  action [:enable, :start]
+network_interface node['ifcfg']['default_if'] do
+  type 'Ethernet'
+  bootproto 'none'
+  bridge_device 'br0'
+end
+
+# set up the user
+hu = node['home-lab']['user']
+
+user hu do
+  home "/home/#{hu}"
+  supports manage_home: true
+  manage_home true
+  shell '/bin/bash'
+end
+
+ssh_dir = File.join(resources(user: hu).home, '.ssh')
+
+directory ssh_dir do
+  mode '0700'
+  owner hu
+  group hu
+end
+
+remote_file File.join(ssh_dir, 'authorized_keys') do
+  source "https://github.com/#{hu}.keys"
+  owner hu
+  group hu
+  mode '0600'
 end
